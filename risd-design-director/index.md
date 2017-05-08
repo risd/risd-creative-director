@@ -23,7 +23,7 @@ layout: home
 </section>
 
 <section class="description">
-	<h2 class="description__title">Sample Work</h2>
+	<h2 class="description__title">The Team’s Work</h2>
 	<div class="gallery-of-work">
 
 		<figure class="gallery-image">
@@ -41,9 +41,17 @@ layout: home
 		<figure class="gallery-image">
 			<img  src="assets/img/admissions/picture-risd.jpg" data-title="Picture RISD" alt="">
 		</figure>
+
+		<figure class="gallery-image">
+			<img  src="assets/img/admissions/picture-risd-02.jpg" data-title="Picture RISD" alt="">
+		</figure>
 		
 		<figure class="gallery-image">
 			<img  src="assets/img/risd-weekend/risd-weekend-posters.gif" data-title="RISD Weekend Posters" alt="">
+		</figure>
+		
+		<figure class="gallery-image">
+			<img  src="assets/img/holiday-card/holiday-card-14.jpg" data-title="Holiday Card" alt="">
 		</figure>
 		
 		<figure class="gallery-image">

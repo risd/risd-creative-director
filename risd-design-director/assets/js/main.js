@@ -10,7 +10,7 @@ images.draggable();
 $('.gallery-image').each(function(){
 
 	var positionLeft = randomX(-15,60);
-    var positionTop = randomY(-10,60);
+    var positionTop = randomY(-20,60);
     var positionZ = randomX(1,10);
 
     $(this).css("left", positionLeft + "%");
