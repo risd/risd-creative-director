@@ -1,0 +1,35 @@
+.intro{
+	width:100vw;
+	height:100vh;
+}
+
+
+h1{
+	@include text-size($sans-xxl);
+	letter-spacing:-0.05em;
+	position:relative;
+	width:100vw;
+	height:100vh;
+	border-bottom:4px solid black;
+
+	span{
+		display:block;
+		background:black;
+		color:white;
+		padding:0.25em 0.4em;
+		position:absolute;
+	}
+
+	.group-01{
+		text-align:center;
+		right:0em;
+	}
+
+	.group-02{
+		bottom:1em;
+		text-align:center;
+	}
+}
+
+
+
