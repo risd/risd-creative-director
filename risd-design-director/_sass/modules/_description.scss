@@ -1,9 +1,12 @@
 section{
-	
+	@include grid-container;
+	@include text-size($medium);
+	padding:2em 0em;
+	// @include grid-visual;
 }
 
 .description{
-	@include text-size($medium);
+	
 
 }
 

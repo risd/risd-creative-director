@@ -5,9 +5,11 @@
 layout: home
 ---
 <header class="intro">
-	<h1><span class="group-01">RISD <br>Media <br>Group</span> 
+	<h1>
+		<span class="group-01">RISD <br>Media <br>Group</span> 
 
-		<span class="group-02">seeks a <br>director of <br>design</span></h1>
+		<span class="group-02">seeks a <br>director of <br>design</span>
+	</h1>
 </header>
 
 <section class="description">
@@ -59,7 +61,7 @@ layout: home
 		<figure class="gallery-image">
 			<img  src="assets/img/presidential-collateral/presidents-collateral.jpg" data-title="RISD Presidential Collateral" alt="">
 		</figure>
-		
+
 		{% comment %}<video class="gallery-video" src="assets/img/commencement/commencement-02.mp4" autoplay loop></video>{% endcomment %}
 		{% comment %}<video class="gallery-video" src="assets/img/nature-lab/nature-lab.mp4"  autoplay loop></video>{% endcomment %}
 	</div>
