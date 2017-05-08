@@ -99,79 +99,35 @@ This definition includes redundant repitition of values, so it can be defined mo
 
 -------------------------------------------------------- */
 
-// X-Small
-$sans-xs:(
-  base:(9px, 12px),
-  medium:(11px, 14px)
-);
-
-$serif-xs:(
-  base:(10px, 14px),
-  medium:(13px, 16px)
-);
-
-// Small
-$sans-s:(
-  base:(11px, 14px),
-  medium:(13px, 21px)
-);
-
-$serif-s:(
-  base:(14px, 18px),
-  medium:(16px, 21px)
-);
-
-// Medium
-
-$sans-m:(
-  base:(16px, 20px),
-  medium:(24px, 28px)
-);
 
 
-$serif-m:(
+
+  
+
+
+$medium:(
   base:(16px, 23px),
   small:(16px, 23px),
-  medium:(16px, 23px)
+  medium:(28px, 32px)
 );
 
-// Large
-$sans-l:(
+$large:(
   base:(21px, 28px),
   medium:(36px, 42px)
 );
 
-$serif-l:(
-  base:(24px, 28px),
-  medium:(36px, 42px)
-);
-
-
-// XL
-$sans-xl:(
-  base:(36px, 36px),
-  medium:(64px, 64px)
-);
-
-$serif-xl:(
-  base:(36px, 36px),
-  medium:(72px, 72px)
-);
-
 // XXL
-$sans-xxl:(
+$xxl:(
   base:(48px, 48px),
   medium:(110px,110px)
 );
 
-$sans-enormous:(
+$button:(
   base:(72px,72px),
   medium:(200px, 200px)
 );
 
-$date-numbers:(
-  base: (64px, 64px)
-);
+
 
 
 /* --------------------------------------------------------

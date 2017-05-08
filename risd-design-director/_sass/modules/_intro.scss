@@ -5,7 +5,7 @@
 
 
 h1{
-	@include text-size($sans-xxl);
+	@include text-size($xxl);
 	letter-spacing:-0.05em;
 	position:relative;
 	width:100vw;

@@ -20,30 +20,49 @@ layout: home
 	</div>
 </section>
 
-<section class="gallery-of-work">
+<section class="description">
 	<h2 class="description__title">Sample Work</h2>
-	
-	<img class="gallery-image" src="assets/img/risd-weekend/risd-weekend-logo.gif" alt="">
+	<div class="gallery-of-work">
 
-	<img class="gallery-image" src="assets/img/admissions/admissions-poster.jpg" alt="">
+		<figure class="gallery-image">
+			<img  src="assets/img/risd-weekend/risd-weekend-logo.gif" data-title="RISD Weeknd Logo" alt="">
+		</figure>
+		
+		<figure class="gallery-image">
+			<img  src="assets/img/admissions/admissions-poster.jpg" data-title="Admissions Undergraduate Poster" alt="">
+		</figure>
+		
+		<figure class="gallery-image">
+			<img src="assets/img/risd-craft/risd-craft-composite.jpg" data-title="RISD Craft" alt="">
+		</figure>
+		
+		<figure class="gallery-image">
+			<img  src="assets/img/admissions/picture-risd.jpg" data-title="Picture RISD" alt="">
+		</figure>
+		
+		<figure class="gallery-image">
+			<img  src="assets/img/risd-weekend/risd-weekend-posters.gif" data-title="RISD Weekend Posters" alt="">
+		</figure>
+		
+		<figure class="gallery-image">
+			<img  src="assets/img/admissions/viewbook.jpg" data-title="RISD Viewbook 2017" alt="">
+		</figure>
 
-	<img class="gallery-image" src="assets/img/risd-craft/risd-craft-composite.jpg" alt="">
+		<figure class="gallery-image">
+			<img  src="assets/img/collection/collection-15-program.jpg"  data-title="Collection 15 Program" alt="">
+		</figure>
 
-
-	<img class="gallery-image" src="assets/img/admissions/picture-risd.jpg" alt="">
-
-	<img class="gallery-image" src="assets/img/risd-weekend/risd-weekend-posters.gif" alt="">
-
-	<img class="gallery-image" src="assets/img/admissions/viewbook.jpg" alt="">
-
-	<img class="gallery-image" src="assets/img/collection/collection-15-program.jpg" alt="">
-
-	<img class="gallery-image" src="assets/img/collection/collection-17-poster.gif" alt="">
-
-	<img class="gallery-image" src="assets/img/presidential-collateral/presidents-collateral.jpg" alt="">
-
-	<video class="video" src="assets/img/commencement/commencement-02.mp4" loop></video>
-	<video class="video" src="assets/img/nature-lab/nature-lab.mp4"  autoplay loop></video>
+		<figure class="gallery-image">
+			<img  src="assets/img/collection/collection-17-poster.gif" data-title="Collection 17 Poster" alt="">
+		</figure>
+		
+		<figure class="gallery-image">
+			<img  src="assets/img/presidential-collateral/presidents-collateral.jpg" data-title="RISD Presidential Collateral" alt="">
+		</figure>
+		
+		{% comment %}<video class="gallery-video" src="assets/img/commencement/commencement-02.mp4" autoplay loop></video>{% endcomment %}
+		{% comment %}<video class="gallery-video" src="assets/img/nature-lab/nature-lab.mp4"  autoplay loop></video>{% endcomment %}
+	</div>
 </section>
 
 <section class="description">

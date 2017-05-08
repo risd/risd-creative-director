@@ -1,98 +1,26 @@
+section{
+	
+}
+
 .description{
-	@include grid-container;
-	
-	margin:0 auto;
-	// @include grid-visual;
-	padding:0 5vw;
-	@include respond-above(small){
-		padding:0;
-	};
+	@include text-size($medium);
 
-	@include respond-above(medium){
-
-	};
-
-	@include respond-above(large){
-		width:80vw;
-	};
-
-	@include respond-above(huge){
-		width:70vw;
-	};
-
-	margin-bottom:1em;
 }
 
-
-
-@include respond-above(small){
-	.description__title{
-		@include grid-column(3);
-		@include text-size($sans-l);
-		letter-spacing: -0.03em;
-		margin-top:0;
-	}
-
-	.description-text-container{
-		@include grid-column(9);
-		
-		p,li{
-			@include text-size($serif-l);
-		}
-		ol,ul{
-			margin-top:0;
-		}
-		li{
-			margin-bottom:1em;
-		}
-	}
-};
-
-
-.description-text-container{
-	p{
-		&:first-child{
-			margin-top:0;
-		}
-	}
-
-	ol,ul{
-		padding-left:1em;
-	}
-}
-
-.apply{
-	background:black;
-	@extend %sans-serif;
-	font-weight:bold;
+.description__title{
+	@include text-size($medium);
 	letter-spacing:-0.04em;
-	color:white;
-	border:none;
-	@include text-size($sans-enormous);
-	border:0.125em solid black;
-	box-sizing:border-box;
-	
 
+	@include respond-above(small){
+		@include grid-column(3);
+	};
+}
 
-	a{
-		display:block;
-		text-decoration:none;
-		color:white;
-		padding:0.125em 0.5em;
-
-	}
-
-	&:hover{
-		background:white;
-		a{
-			color:black;
-		}
-		// border:0.125em solid 
-	}
-
-	&:active{
-		@include transform(scale(0.8));
-	}
+.description-text-container,
+.gallery-of-work{
+	@include respond-above(small){
+		@include grid-column(9);
+	};
 }
 
 

@@ -1,7 +1,32 @@
-.video{
+.gallery-video{
 	max-width:40vw;
 }
 
+.gallery-image {
+	background:rgba(0,0,0,0.2);
+	img{
+		max-width:30vw;
+	}
+	
+	&:hover{
+		z-index:1000;
+		cursor:move;
+	}
+}
+
+.gallery-video,
 .gallery-image{
-	max-width:30vw;
+	@include respond-above(small){
+		position:absolute;
+	};
+}
+
+.gallery-of-work{
+	position:relative;
+	// background:rgb(240,240,240);
+
+	@include respond-above(small){
+		@include grid-push(3);
+		height:100vh;
+	};
 }
