@@ -8,10 +8,10 @@ layout: home
 		<span class="group-02">seeks a <br>director of <br>design</span>
 	</h1>
 	<span class="logo left">
-		{% comment %}{% include risd-seal.svg  %}{% endcomment %}
+		{% include risd-seal.svg  %}
 	</span>	
 	<span class="logo right">
-		{% comment %}{% include risd-seal.svg  %}{% endcomment %}
+		{% include risd-seal.svg  %}
 	</span>
 </header>
 
