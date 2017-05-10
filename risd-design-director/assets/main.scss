@@ -4,6 +4,7 @@
 
 body{
 	margin:0px;
+	background:rgb(248,248,248);
 }
 
 
@@ -19,6 +20,10 @@ body{
 @import "modules/intro";
 @import "modules/gallery";
 
+::selection{
+	background:rgb(0,255,0);
+	color:black;
+}
 
 
 h1,h2,h3,h4,h5,h6{
@@ -38,11 +43,55 @@ p, li{
 	padding:0;
 	display:block;
 	margin:0 auto;
+
+	&:active{
+		@include transform(scale(0.9));
+	}
 	a{
 		display:block;
-		background:rgb(0,255,0);
-		padding:0.25em;
+		border:0.125em solid rgb(0,255,0);
+		background:white;
+		padding:0.125em 0.25em 0.25em 0.25em;
 		text-decoration: none;
-		color:white;
+		color:rgb(0,255,0);
+		&:hover{
+			border:0.125em solid rgb(0,0,0);
+			background:rgb(0,255,0);
+			color:black;
+		}
 	}
 }
+
+.logo{
+	display:none;
+	@include respond-above(small){
+		display:block;
+		position:fixed;
+		z-index:-1;
+		top:-60px;
+		// @include transform(rotate(90deg));
+		@include animation(spin 100s ease-in-out alternate infinite);
+		svg{
+			path{
+				fill:rgb(0,255,0);
+			}
+		}
+
+		&.left{
+			left:-60px;
+		}
+		&.right{
+			right:-60px;
+		}
+	};	
+}
+
+
+@include keyframes(spin){
+	from{
+		@include transform(translate(0, 50vh) rotate(90deg));
+	}
+	to{
+		@include transform(translate(0, 50vh) rotate(-90deg));
+	}
+};

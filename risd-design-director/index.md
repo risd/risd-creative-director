@@ -10,6 +10,12 @@ layout: home
 
 		<span class="group-02">seeks a <br>director of <br>design</span>
 	</h1>
+	<span class="logo left">
+		{% include risd-seal.svg  %}
+	</span>	
+	<span class="logo right">
+		{% include risd-seal.svg  %}
+	</span>
 </header>
 
 <section class="description">
@@ -23,51 +29,90 @@ layout: home
 </section>
 
 <section class="description">
-	<h2 class="description__title">The Team’s Work</h2>
+	<h2 class="description__title">Recent Work</h2>
 	<div class="gallery-of-work">
 
 		<figure class="gallery-image">
 			<img  src="assets/img/risd-weekend/risd-weekend-logo.gif" data-title="RISD Weeknd Logo" alt="">
+			{% include gallery-controls.html  %}
+
 		</figure>
 		
 		<figure class="gallery-image">
 			<img  src="assets/img/admissions/admissions-poster.jpg" data-title="Admissions Undergraduate Poster" alt="">
+			{% include gallery-controls.html  %}
+
 		</figure>
 		
 		<figure class="gallery-image">
 			<img src="assets/img/risd-craft/risd-craft-composite.jpg" data-title="RISD Craft" alt="">
+			{% include gallery-controls.html  %}
 		</figure>
 		
 		<figure class="gallery-image">
-			<img  src="assets/img/admissions/picture-risd.jpg" data-title="Picture RISD" alt="">
+			<img  src="assets/img/admissions/working.jpg" data-title="Working" alt="">
+			{% include gallery-controls.html  %}
+		</figure>
+		<figure class="gallery-image">
+			<img  src="assets/img/inauguration/inauguration.jpg" data-title="Rosanne Somerson Inauguration" alt="">
+			{% include gallery-controls.html  %}
+		</figure>
+
+		<figure class="gallery-image">
+			<img  src="assets/img/edu/risd-edu.gif" data-title="RISD Edu" alt="">
+			{% include gallery-controls.html  %}
+
 		</figure>
 
 		<figure class="gallery-image">
 			<img  src="assets/img/admissions/picture-risd-02.jpg" data-title="Picture RISD" alt="">
+			{% include gallery-controls.html  %}
+
 		</figure>
 		
 		<figure class="gallery-image">
 			<img  src="assets/img/risd-weekend/risd-weekend-posters.gif" data-title="RISD Weekend Posters" alt="">
+			{% include gallery-controls.html  %}
+		</figure>
+		
+		<figure class="gallery-image">
+			<img  src="assets/img/welcome-site/welcome-site.gif" data-title="Welcome Site" alt="">
+			{% include gallery-controls.html  %}
+		</figure>
+
+		<figure class="gallery-image">
+			<img  src="assets/img/nature-lab/nature-lab.gif" data-title="Nature Lab" alt="">
+			{% include gallery-controls.html  %}
 		</figure>
 		
 		<figure class="gallery-image">
 			<img  src="assets/img/holiday-card/holiday-card-14.jpg" data-title="Holiday Card" alt="">
+			{% include gallery-controls.html  %}
+
 		</figure>
 		
 		<figure class="gallery-image">
 			<img  src="assets/img/admissions/viewbook.jpg" data-title="RISD Viewbook 2017" alt="">
+			{% include gallery-controls.html  %}
+
 		</figure>
 
 		<figure class="gallery-image">
 			<img  src="assets/img/collection/collection-15-program.jpg"  data-title="Collection 15 Program" alt="">
+			{% include gallery-controls.html  %}
+
 		</figure>
 
 		<figure class="gallery-image">
 			<img  src="assets/img/collection/collection-17-poster.gif" data-title="Collection 17 Poster" alt="">
+			{% include gallery-controls.html  %}
+
 		</figure>
 		
 		<figure class="gallery-image">
 			<img  src="assets/img/presidential-collateral/presidents-collateral.jpg" data-title="RISD Presidential Collateral" alt="">
+			{% include gallery-controls.html  %}
+
 		</figure>
 
 		{% comment %}<video class="gallery-video" src="assets/img/commencement/commencement-02.mp4" autoplay loop></video>{% endcomment %}
@@ -99,7 +144,7 @@ layout: home
 </section>
 
 <section class="description">
-	<h2 class="description__title">Job Summary</h2>
+	<h2 class="description__title">Qualifications</h2>
 	<div class="description-text-container">
 		<ul>
 			 <li>Bachelor’s degree in graphic design or related field required, MFA preferred.</li>
