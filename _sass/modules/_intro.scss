@@ -18,10 +18,12 @@ h1{
 
 	span{
 		display:block;
-		background:rgb(0,255,0);
+		background:rgb(0,0,0);
 		color:white;
 		padding:0.25em 0.4em;
-		position:absolute;
+		margin:0 auto;
+		width:5.5em;
+		// position:absolute;
 		// mix-blend-mode:multiply;
 
 		&:hover{

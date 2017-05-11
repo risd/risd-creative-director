@@ -77,7 +77,7 @@ h1 { letter-spacing: -0.05em; position: relative; width: 100vw; height: 100vh; m
 @media screen and (min-width: 1px) { h1 { font-size: 48px; line-height: calc(48 / 48); } }
 @media screen and (min-width: 769px) { h1 { font-size: 72px; line-height: calc(72 / 72); } }
 @media screen and (min-width: 1025px) { h1 { font-size: 96px; line-height: calc(96 / 96); } }
-h1 span { display: block; background: lime; color: white; padding: 0.25em 0.4em; position: absolute; }
+h1 span { display: block; background: black; color: white; padding: 0.25em 0.4em; margin: 0 auto; width: 5.5em; }
 h1 .group-01 { text-align: center; right: 0em; }
 h1 .group-02 { bottom: 1em; text-align: center; }
 
