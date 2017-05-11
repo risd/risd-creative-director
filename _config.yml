@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: RISD Media Group Seeks Design Director
+title: RISD Seeks Design Director
 email: kstroud@risd.edu
 description: > # this means to ignore newlines until "baseurl:"
  RISD is seeking a Director of Design to convey the collective imagination of the college community through integrated print and digital communications that engage and inform diverse audiences, including prospective and current students, donors, faculty members, alumni and the general public.
