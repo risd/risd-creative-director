@@ -23,6 +23,7 @@ group :jekyll_plugins do
    gem 'jekyll-livereload'
    gem "neat"
    gem 'bourbon'
+   gem 'github-pages'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
