@@ -16,7 +16,15 @@
 			cursor:move;	
 		}
 	}
-	
+	&.selected{
+		width:100vw;
+		height:100vh;
+		background:red;
+		position:fixed;
+		left:0;
+		top:0;
+	}
+
 	&:hover{
 		z-index:1000;
 		.controls{

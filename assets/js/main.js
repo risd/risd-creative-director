@@ -5,7 +5,7 @@ var images = $('.gallery-image');
 images.draggable();
 
 
-console.log('%c Web savvy folks are greatly appreciated. ', 'font-family:gotham, helvetica, sans-serif; font-weight:bold;marign-bottom:1em; background: rgb(0,255,0); color: rgb(0,0,0); font-size:24px; padding:0.5em;');
+console.log('%c Apply! Apply! Apply!. ', 'font-family:gotham, helvetica, sans-serif; font-weight:bold;marign-bottom:1em; background: rgb(0,255,0); color: rgb(0,0,0); font-size:24px; padding:0.5em;');
 
 
 $('.gallery-image').each(function(){
@@ -32,10 +32,13 @@ $('.gallery-image').each(function(){
     
 });
 
-console.log($('.gallery-image').css("left"));
+function randomDistribution(){
+
+}
 
 
 
+// generate random X number
 function randomX(min, max){
 	return Math.floor(Math.random() * (max - min)) + min;		
 }
@@ -52,12 +55,11 @@ $('.icon').click(function(){
 	var galleryContainerWidth = galleryContainer[0].clientWidth;
 	var leftCoordinateClean = parseInt(leftCoordinate,10);
 
-	grow(); 
-	console.log(leftCoordinateClean);
-	console.log("gallery center " + galleryCenter + " left coordinate " + leftCoordinateClean);
+	// console.log(leftCoordinateClean);
+	// console.log("gallery center " + galleryCenter + " left coordinate " + leftCoordinateClean);
 
 	if(leftCoordinateClean >= galleryCenter){
-		console.log('woo hoo!');
+		// console.log('woo hoo!');
 		$(this).closest("figure").toggleClass("bottom-right");
 	} else {
 		$(this).closest("figure").toggleClass("bottom-left");
@@ -77,9 +79,17 @@ function grow(){
 	var galleryContainerWidth = galleryContainer[0].clientWidth;
 	var galleryCenter = galleryContainerWidth / 2;
 
-	console.log(galleryContainerWidth);
-	console.log(galleryCenter);
+	// console.log(galleryContainerWidth);
+	// console.log(galleryCenter);
 }
+
+$body = $("body");
+
+$(document).on({
+    ajaxStart: function() { $body.addClass("loading");    },
+     ajaxStop: function() { $body.removeClass("loading"); }    
+});
+
 
 // console.log(galleryContainerWidth);
 
