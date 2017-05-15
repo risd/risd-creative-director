@@ -16,16 +16,17 @@
 
 	img{
 		max-width:70vw;
-		@include respond-above(small){
-			max-width:30vw;	
-		};
-		
 		@include transition(all 0.2s ease-in-out);
 		@include transform-origin(0% 100%);
-		&:hover{
-			cursor:move;	
-		}
+		@include respond-above(small){
+			max-width:30vw;
+
+			&:hover{
+				cursor:move;	
+			}	
+		};	
 	}
+
 	&.selected{
 		width:100vw;
 		height:100vh;
