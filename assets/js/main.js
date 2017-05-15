@@ -2,7 +2,6 @@
 $('.gallery-video').draggable();
 
 var images = $('.gallery-image');
-images.draggable();
 
 var pileStatus = false;
 
@@ -11,18 +10,23 @@ var pileStatus = false;
 console.log($(window).width());
 // console.log("hey");
 if($(window).width() > 512){
-	pileStatus = false;
+	// pileStatus = false;
 	makeAPile();
+	images.draggable();
+
 
 }
 
 if ($(window).width() < 512) {
 	pileStatus = false;
+
 }
 
 $(window).resize(function(){
-	if($(window).width() > 512 && (pileStatus = false)){
-	makeAPile();
+	console.log(pileStatus);
+	if($(window).width() > 512 && (pileStatus === false)){
+		makeAPile();
+		images.draggable();
 
 	}
 	
@@ -35,14 +39,19 @@ function makeAPile(){
 	    var positionTop = randomY(-20,75);
 	    var positionZ = randomX(1,10);
 
-	    var pileStatus = true;
 
-	    $(this).css("left", positionLeft + "%");
-	    $(this).css("top", positionTop + "%");
-	    $(this).css("z-index", positionZ);
+	    // $(this).css("left", positionLeft + "%");
+	    // $(this).css("top", positionTop + "%");
+	    // $(this).css("z-index", positionZ);
+	    $(this).css({
+	    	left: positionLeft + '%',
+	    	top: positionTop + '%',
+	    	zIndex: positionZ
+	    });
 	    images.hover(hovering, notHovering);
 
-	 
+	 	pileStatus = true;
+
 	    function hovering(){
 	    	positionZ = positionZ + 1000;
 			$(this).css("z-index", positionZ);
@@ -52,6 +61,7 @@ function makeAPile(){
 			positionZ = positionZ - 1;
 			$(this).css("z-index", positionZ);
 		}
+	 	return pileStatus;
 	    
 	});
 }
