@@ -5,9 +5,10 @@ var images = $('.gallery-image');
 
 var pileStatus = false;
 
+'font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", "Helvetica", "Arial", sans-serif;'
 
-// console.log('%c Apply! Apply! Apply!. ', 'font-family:gotham, helvetica, sans-serif; font-weight:bold;marign-bottom:1em; background: rgb(0,255,0); color: rgb(0,0,0); font-size:24px; padding:0.5em;');
-console.log($(window).width());
+console.log('%c Apply Today!', 'font-family:Gotham, "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", "Helvetica", "Arial", sans-serif; font-feature-settings: "salt" 3; font-weight:bold; marign-bottom:1em; color: rgb(0,255,0); font-size:120px; letter-spacing:-10px;');
+
 // console.log("hey");
 if($(window).width() > 512){
 	// pileStatus = false;
@@ -23,7 +24,7 @@ if ($(window).width() < 512) {
 }
 
 $(window).resize(function(){
-	console.log(pileStatus);
+
 	if($(window).width() > 512 && (pileStatus === false)){
 		makeAPile();
 		images.draggable();
