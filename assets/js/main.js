@@ -5,32 +5,47 @@ var images = $('.gallery-image');
 images.draggable();
 
 
-console.log('%c Apply! Apply! Apply!. ', 'font-family:gotham, helvetica, sans-serif; font-weight:bold;marign-bottom:1em; background: rgb(0,255,0); color: rgb(0,0,0); font-size:24px; padding:0.5em;');
+// console.log('%c Apply! Apply! Apply!. ', 'font-family:gotham, helvetica, sans-serif; font-weight:bold;marign-bottom:1em; background: rgb(0,255,0); color: rgb(0,0,0); font-size:24px; padding:0.5em;');
+console.log($(window).width());
+// console.log("hey");
+if($(window).width() > 512){
+	makeAPile();
 
+}
 
-$('.gallery-image').each(function(){
+$(window).resize(function(){
+	if($(window).width() > 512){
+	makeAPile();
 
-	var positionLeft = randomX(-15,60);
-    var positionTop = randomY(-20,75);
-    var positionZ = randomX(1,10);
-
-    $(this).css("left", positionLeft + "%");
-    $(this).css("top", positionTop + "%");
-    $(this).css("z-index", positionZ);
-
- 
-    images.hover(hovering, notHovering);
-    function hovering(){
-    	positionZ = positionZ + 1000;
-		$(this).css("z-index", positionZ);
 	}
-
-	function notHovering(){
-		positionZ = positionZ - 1;
-		$(this).css("z-index", positionZ);
-	}
-    
+	
 });
+
+function makeAPile(){
+	$('.gallery-image').each(function(){
+
+		var positionLeft = randomX(-15,60);
+	    var positionTop = randomY(-20,75);
+	    var positionZ = randomX(1,10);
+
+	    $(this).css("left", positionLeft + "%");
+	    $(this).css("top", positionTop + "%");
+	    $(this).css("z-index", positionZ);
+
+	 
+	    images.hover(hovering, notHovering);
+	    function hovering(){
+	    	positionZ = positionZ + 1000;
+			$(this).css("z-index", positionZ);
+		}
+
+		function notHovering(){
+			positionZ = positionZ - 1;
+			$(this).css("z-index", positionZ);
+		}
+	    
+	});
+}
 
 function randomDistribution(){
 
@@ -46,6 +61,8 @@ function randomX(min, max){
 function randomY(min, max){
 	return Math.floor(Math.random() * (max - min)) + min;		
 }
+
+
 
 $('.icon').click(function(){
 	$('.gallery-image').toggleClass('deselected');

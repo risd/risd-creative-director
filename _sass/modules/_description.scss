@@ -1,10 +1,11 @@
 section{
 	@include grid-container;
 	@include text-size($medium);
-	padding:2em 0em;
+	padding:2em 2em;
 	// @include grid-visual;
 	@include respond-above(medium){
 		letter-spacing:-0.02em;
+		padding: 2em 0em;
 	};
 }
 

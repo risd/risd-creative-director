@@ -45,12 +45,12 @@ Font size can take on the following values: small, regular, medium, large, xlarg
 
 If the mixin is called and values are not entered, it will default to regular font-size
 -------------------------------------------------------- */
-section { padding: 2em 0em; }
+section { padding: 2em 2em; }
 section::after { clear: both; content: ""; display: block; }
 @media screen and (min-width: 1px) { section { font-size: 16px; line-height: calc(23 / 16); } }
 @media screen and (min-width: 513px) { section { font-size: 20px; line-height: calc(24 / 20); } }
 @media screen and (min-width: 769px) { section { font-size: 28px; line-height: calc(32 / 28); } }
-@media screen and (min-width: 769px) { section { letter-spacing: -0.02em; } }
+@media screen and (min-width: 769px) { section { letter-spacing: -0.02em; padding: 2em 0em; } }
 
 .description__title { color: lime; letter-spacing: -0.04em; }
 @media screen and (min-width: 1px) { .description__title { font-size: 48px; line-height: calc(48 / 48); } }
@@ -91,8 +91,7 @@ h1 .group-02 { bottom: 1em; text-align: center; }
   to { background: black; color: white; } }
 @keyframes flash { from { background: lime; color: black; }
   to { background: black; color: white; } }
-.gallery-video { max-width: 40vw; }
-
+@media screen and (min-width: 513px) { .gallery-image { position: absolute; } }
 .gallery-image img { max-width: 70vw; -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; -webkit-transform-origin: 0% 100%; -moz-transform-origin: 0% 100%; -ms-transform-origin: 0% 100%; -o-transform-origin: 0% 100%; transform-origin: 0% 100%; }
 @media screen and (min-width: 513px) { .gallery-image img { max-width: 30vw; } }
 .gallery-image img:hover { cursor: move; }
@@ -104,8 +103,6 @@ h1 .group-02 { bottom: 1em; text-align: center; }
 .gallery-image.bottom-right img { -webkit-transform-origin: 200% 100%; -moz-transform-origin: 200% 100%; -ms-transform-origin: 200% 100%; -o-transform-origin: 200% 100%; transform-origin: 200% 100%; }
 
 .deselected { -webkit-filter: grayscale(1) contrast(0.1) brightness(1.9); filter: grayscale(1) contrast(0.1) brightness(1.9); }
-
-@media screen and (min-width: 513px) { .gallery-video, .gallery-image { position: absolute; } }
 
 .gallery-of-work { position: relative; }
 @media screen and (min-width: 513px) { .gallery-of-work { margin-left: calc(25% - 25px + 40px); height: 175vh; } }
