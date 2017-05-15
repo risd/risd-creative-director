@@ -1,9 +1,5 @@
 @charset "UTF-8";
 body { margin: 0px; background: #f8f8f8; }
-body.loading { overflow: hidden; }
-body.loading .modal { display: block; }
-
-.modal { display: none; position: fixed; z-index: 1000; top: 0; left: 0; height: 100%; width: 100%; background: rgba(255, 255, 255, 0.8) url("http://i.stack.imgur.com/FhHRx.gif") 50% 50% no-repeat; }
 
 @font-face { font-family: "Modern Pictograms"; font-weight: 100; src: url("fonts/modernpics_2_268e-webfont.eot"), url("fonts/modernpics_2_268e-webfont.ttf"), url("fonts/modernpics_2_268e-webfont.woff"); }
 ol li:before, h1, h2, h3, h4, h5, h6, .apply { font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
@@ -91,13 +87,14 @@ h1 .group-02 { bottom: 1em; text-align: center; }
   to { background: black; color: white; } }
 @keyframes flash { from { background: lime; color: black; }
   to { background: black; color: white; } }
-@media screen and (min-width: 513px) { .gallery-image { position: absolute; } }
+.gallery-image { position: static; }
+@media screen and (min-width: 513px) { .gallery-image { position: absolute; }
+  .gallery-image:hover { z-index: 1000; }
+  .gallery-image:hover .controls { display: block; } }
 .gallery-image img { max-width: 70vw; -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; -webkit-transform-origin: 0% 100%; -moz-transform-origin: 0% 100%; -ms-transform-origin: 0% 100%; -o-transform-origin: 0% 100%; transform-origin: 0% 100%; }
 @media screen and (min-width: 513px) { .gallery-image img { max-width: 30vw; } }
 .gallery-image img:hover { cursor: move; }
 .gallery-image.selected { width: 100vw; height: 100vh; background: red; position: fixed; left: 0; top: 0; }
-.gallery-image:hover { z-index: 1000; }
-.gallery-image:hover .controls { display: block; }
 .gallery-image.big img { -webkit-transform: scale(2); -moz-transform: scale(2); -ms-transform: scale(2); -o-transform: scale(2); transform: scale(2); }
 .gallery-image.big .controls svg polygon { -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg); }
 .gallery-image.bottom-right img { -webkit-transform-origin: 200% 100%; -moz-transform-origin: 200% 100%; -ms-transform-origin: 200% 100%; -o-transform-origin: 200% 100%; transform-origin: 200% 100%; }
@@ -108,8 +105,8 @@ h1 .group-02 { bottom: 1em; text-align: center; }
 @media screen and (min-width: 513px) { .gallery-of-work { margin-left: calc(25% - 25px + 40px); height: 175vh; } }
 
 .controls { display: none; }
-.controls .icon { color: lime; }
-.controls .icon:hover { cursor: pointer; }
+@media screen and (min-width: 513px) { .controls .icon { color: lime; }
+  .controls .icon:hover { cursor: pointer; } }
 .controls svg { max-height: 20px; max-width: 24px; }
 .controls svg polygon { fill: lime; -webkit-transform-origin: 50% 50%; -moz-transform-origin: 50% 50%; -ms-transform-origin: 50% 50%; -o-transform-origin: 50% 50%; transform-origin: 50% 50%; -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.72, -0.07, 0.29, 1.11); -moz-transition: -moz-transform 0.25s cubic-bezier(0.72, -0.07, 0.29, 1.11); transition: transform 0.25s cubic-bezier(0.72, -0.07, 0.29, 1.11); }
 

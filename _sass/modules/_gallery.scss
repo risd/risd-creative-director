@@ -1,11 +1,18 @@
 
 .gallery-image {
 	// background:rgba(0,0,0,0.2);
-
+	position:static;
 	@include respond-above(small){
 		position:absolute;
+
+		&:hover{
+			z-index:1000;
+			.controls{
+				display:block;
+			}
+		}
 	};
-	
+
 	img{
 		max-width:70vw;
 		@include respond-above(small){
@@ -27,12 +34,7 @@
 		top:0;
 	}
 
-	&:hover{
-		z-index:1000;
-		.controls{
-			display:block;
-		}
-	}
+	
 
 	&.big{
 
@@ -79,20 +81,16 @@
 
 .controls{
 	display:none;
-	.icon{
-		color:rgb(0,255,0);
-		&:hover{
-			cursor:pointer;
-		}
-	}
-	.scale-up{
-		
-		
-	}
 
-	.scale-down{
-
-	}
+	@include respond-above(small){
+		.icon{
+			color:rgb(0,255,0);
+			&:hover{
+				cursor:pointer;
+			}
+		}	
+	};
+	
 	svg{
 		max-height:20px;
 		max-width:24px;

@@ -4,17 +4,24 @@ $('.gallery-video').draggable();
 var images = $('.gallery-image');
 images.draggable();
 
+var pileStatus = false;
+
 
 // console.log('%c Apply! Apply! Apply!. ', 'font-family:gotham, helvetica, sans-serif; font-weight:bold;marign-bottom:1em; background: rgb(0,255,0); color: rgb(0,0,0); font-size:24px; padding:0.5em;');
 console.log($(window).width());
 // console.log("hey");
 if($(window).width() > 512){
+	pileStatus = false;
 	makeAPile();
 
 }
 
+if ($(window).width() < 512) {
+	pileStatus = false;
+}
+
 $(window).resize(function(){
-	if($(window).width() > 512){
+	if($(window).width() > 512 && (pileStatus = false)){
 	makeAPile();
 
 	}
@@ -28,12 +35,14 @@ function makeAPile(){
 	    var positionTop = randomY(-20,75);
 	    var positionZ = randomX(1,10);
 
+	    var pileStatus = true;
+
 	    $(this).css("left", positionLeft + "%");
 	    $(this).css("top", positionTop + "%");
 	    $(this).css("z-index", positionZ);
+	    images.hover(hovering, notHovering);
 
 	 
-	    images.hover(hovering, notHovering);
 	    function hovering(){
 	    	positionZ = positionZ + 1000;
 			$(this).css("z-index", positionZ);
@@ -82,8 +91,6 @@ $('.icon').click(function(){
 		$(this).closest("figure").toggleClass("bottom-left");
 
 	}
-	
-	
 });
 
 
