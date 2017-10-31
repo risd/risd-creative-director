@@ -73,7 +73,7 @@ ol{
 			font-size:0.7em;
 			text-align:center;
 			border-radius: 50%;
-			&:not(ul li) {
+			&[data-counter] {
 				counter-increment: item;
 			}
 		}
