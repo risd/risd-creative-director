@@ -73,10 +73,14 @@ ol{
 			font-size:0.7em;
 			text-align:center;
 			border-radius: 50%;
-			&[data-counter] {
+		}
+
+		&[data-counter] {
+			&:before {
 				counter-increment: item;
 			}
 		}
+		
 		&:hover:before{
 			color:rgb(0,255,0);
 			border-color:rgb(0,255,0);
