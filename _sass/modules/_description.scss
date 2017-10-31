@@ -79,6 +79,33 @@ ol{
 			color:rgb(0,255,0);
 			border-color:rgb(0,255,0);
 		}
+
+		ul {
+			list-style:none;
+			li {
+				display: block;
+				margin-bottom: .5em;
+				margin-left: 2em;
+				&:before{
+					display: block;
+					position:absolute;
+					content:"⌖";
+					width: auto;
+					height: auto;
+					font-size:1.5em;
+					margin-left: -1.25em;
+					margin-top:-.25em;
+					margin-right: 0;
+					border: none;
+					padding: 0;
+					border-radius: none;
+				}
+
+				&:hover:before{
+					color:rgb(0,255,0);
+				}
+			}
+		}
 	}
 
 }
