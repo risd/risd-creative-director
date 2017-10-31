@@ -60,7 +60,6 @@ ol{
 			display: block;
 			position:absolute;
 			content: counter(item);
-			counter-increment: item;
 			width: 1em;
 			height:1em;
 			margin-left: -3em;
@@ -74,6 +73,9 @@ ol{
 			font-size:0.7em;
 			text-align:center;
 			border-radius: 50%;
+			&:not(ul li) {
+				counter-increment: item;
+			}
 		}
 		&:hover:before{
 			color:rgb(0,255,0);
