@@ -1,134 +1,175 @@
-section{
-	@include grid-container;
-	@include text-size($medium);
-	padding:2em 2em;
-	// @include grid-visual;
-	@include respond-above(medium){
-		letter-spacing:-0.02em;
-		padding: 2em 0em;
-	};
-}
+---
+layout: home
+---
+<header class="intro">
+	<h1>
+		<span class="group-01">RISD <br>seeks a<br> creative<br> director</span> 
+		
 
-.description{
+	</h1>
+	<span class="logo left">
+		{% include risd-seal.svg  %}
+	</span>	
+	<span class="logo right">
+		{% include risd-seal.svg  %}
+	</span>
+</header>
 
-}
+<section class="description">
+	<h2 class="description__title">Help Wanted</h2>
+	<div class="description-text-container">
+		<p>RISD is seeking a Creative Director to develop and champion the college’s visual brand and lead a cross-disciplinary team in producing outstanding creative work.</p>
+		<p>The ideal candidate for this newly created position will be an innovative thinker and creative problem solver with a sophisticated visual sensibility and strong management experience. This leader understands how design, text and imagery work together to create digital experiences and print materials across both traditional and emerging media channels that engage and inform diverse audiences (including prospective and current students, donors, faculty members, alumni and the general public).</p>
+		<p>By acting strategically, inspiring performance, developing talent and fostering an inclusive environment, the Creative Director will manage the creative process from concept to completion to help RISD achieve its communications and marketing objectives.</p>
+	</div>
+</section>
 
-.description__title{
+<section class="description">
+	<h2 class="description__title">Recent Work</h2>
+	<div class="gallery-of-work">
 
-	@include text-size($xxl);
-	color:rgb(0,255,0);
-	letter-spacing:-0.04em;
+		<figure class="gallery-image" >
+			<img  src="assets/img/risd-weekend/risd-weekend-logo.gif" data-title="RISD Weeknd Logo" alt="">
+			{% include gallery-controls.html  %}
 
-	@include respond-above(small){
-		@include grid-column(3);
-	};
-	@include respond-above(large){
-		@include grid-push(1);
-	};
-}
+		</figure>
+		
+		<figure class="gallery-image">
+			<img  src="assets/img/admissions/admissions-poster.jpg" data-title="Admissions Undergraduate Poster" alt="">
+			{% include gallery-controls.html  %}
 
-.description-text-container,
-.gallery-of-work{
-	@extend %antialiased;
-	@include respond-above(small){
-		@include grid-column(9);
-	};
+		</figure>
+		
+		<figure class="gallery-image" >
+			<img src="assets/img/risd-craft/risd-craft-composite.jpg" data-title="RISD Craft" alt="">
+			{% include gallery-controls.html  %}
+		</figure>
+		
+		<figure class="gallery-image">
+			<img  src="assets/img/admissions/working.jpg" data-title="Working" alt="">
+			{% include gallery-controls.html  %}
+		</figure>
+		<figure class="gallery-image">
+			<img  src="assets/img/inauguration/inauguration.jpg" data-title="Rosanne Somerson Inauguration" alt="">
+			{% include gallery-controls.html  %}
+		</figure>
 
-	@include respond-above(large){
-		@include grid-column(7);
-	};
+		<figure class="gallery-image">
+			<img  src="assets/img/edu/risd-edu.gif" data-title="RISD Edu" alt="">
+			{% include gallery-controls.html  %}
 
-	@include respond-above(huge){
-		@include grid-column(6);
-	};
-}
+		</figure>
 
+		<figure class="gallery-image">
+			<img  src="assets/img/admissions/picture-risd-02.jpg" data-title="Picture RISD" alt="">
+			{% include gallery-controls.html  %}
 
-li{
-	margin-bottom:0.5em;
-}
+		</figure>
+		
+		<figure class="gallery-image">
+			<img  src="assets/img/risd-weekend/risd-weekend-posters.gif" data-title="RISD Weekend Posters" alt="">
+			{% include gallery-controls.html  %}
+		</figure>
+		
+		<figure class="gallery-image">
+			<img  src="assets/img/welcome-site/welcome-site.gif" data-title="Welcome Site" alt="">
+			{% include gallery-controls.html  %}
+		</figure>
 
-ol{
-	counter-reset: item;
+		<figure class="gallery-image">
+			<img  src="assets/img/nature-lab/nature-lab.gif" data-title="Nature Lab" alt="">
+			{% include gallery-controls.html  %}
+		</figure>
+		
+		<figure class="gallery-image">
+			<img  src="assets/img/holiday-card/holiday-card-14.jpg" data-title="Holiday Card" alt="">
+			{% include gallery-controls.html  %}
 
-	li{
-		display: block;
-		margin-bottom: .5em;
-		margin-left: 2em;
+		</figure>
+		
+		<figure class="gallery-image">
+			<img  src="assets/img/admissions/viewbook.jpg" data-title="RISD Viewbook 2017" alt="">
+			{% include gallery-controls.html  %}
 
-		&:before{
-			display: block;
-			position:absolute;
-			content: counter(item);
-			width: 1em;
-			height:1em;
-			margin-left: -3em;
-			margin-right:1em;
-			margin-top:-0.25em;
-			@extend %sans-serif;
-			font-weight:bold;
-			border:2px solid black;
-			color:black;
-			padding:0.5em;
-			font-size:0.7em;
-			text-align:center;
-			border-radius: 50%;
-			&[data-counter] {
-				counter-increment: item;
-			}
-		}
-		&:hover:before{
-			color:rgb(0,255,0);
-			border-color:rgb(0,255,0);
-		}
+		</figure>
 
-		ul {
-			list-style:none;
-			li {
-				display: block;
-				margin-bottom: .5em;
-				margin-left: 2em;
-				&:before{
-					display: block;
-					position:absolute;
-					content:"⌖";
-					width: auto;
-					height: auto;
-					font-size:1.5em;
-					margin-left: -1.25em;
-					margin-top:-.25em;
-					margin-right: 0;
-					border: none;
-					padding: 0;
-					border-radius: none;
-				}
+		<figure class="gallery-image">
+			<img  src="assets/img/collection/collection-15-program.jpg"  data-title="Collection 15 Program" alt="">
+			{% include gallery-controls.html  %}
 
-				&:hover:before{
-					color:rgb(0,255,0);
-				}
-			}
-		}
-	}
+		</figure>
 
-}
+		<figure class="gallery-image">
+			<img  src="assets/img/collection/collection-17-poster.gif" data-title="Collection 17 Poster" alt="">
+			{% include gallery-controls.html  %}
 
-ul{
-	list-style:none;
-	li{
-		display: block;
-		margin-bottom: .5em;
-		margin-left: 2em;
-		&:before{
-			display: block;
-			position:absolute;
-			content:"⌖";
-			font-size:1.5em;
-			margin-left: -1.25em;
-			margin-top:-.25em;
-		}
+		</figure>
+		
+		<figure class="gallery-image" id="test">
+			<img  src="assets/img/presidential-collateral/presidents-collateral.jpg" data-title="RISD Presidential Collateral" alt="">
+			{% include gallery-controls.html  %}
 
-		&:hover:before{
-			color:rgb(0,255,0);
-		}
-	}
-}
+		</figure>
+
+		{% comment %}<video class="gallery-video" src="assets/img/commencement/commencement-02.mp4" autoplay loop></video>{% endcomment %}
+		{% comment %}<video class="gallery-video" src="assets/img/nature-lab/nature-lab.mp4"  autoplay loop></video>{% endcomment %}
+	</div>
+</section>
+
+<section class="description">
+	<h2 class="description__title">Essential Functions / Duties</h2>
+	<div class="description-text-container">
+		<ol>
+			<li data-counter>
+				<p>Develop and champion RISD’s visual and editorial voice to deliver intentional, consistent and distinctive experiences.</p>
+				<ul>
+					<li>Lead the creation and evolution of RISD brand guidelines, directives and identity systems. Communicate with and gain investment from campus partners to ensure that these are embraced and adhered to across projects and platforms.</li>
+					<li>With input from RISD’s President, academic leaders, Media team members and other community stakeholders, develop the creative strategies and concepts for RISD’s marketing and communications materials.</li>
+					<li>Elevate key initiatives with the highest impact on RISD’s brand, recruitment, fundraising and other institutional goals.</li>
+					<li>Keep abreast of current and emerging industry trends, evaluating if and how they might be appropriate for RISD and implementing accordingly.</li>
+				</ul>
+			</li>
+			<li data-counter>
+				<p>Lead a cross-functional team of creative professionals -- whose responsibilities include graphic design, content planning/writing/editing, photography and production coordination -- in conceiving and executing marketing messages, concepts and assets to achieve project objectives.</p>
+				<ul>
+					<li>Hire, train and manage the creative team, providing members with direction, coaching and professional development opportunities. Inspire both team and individual performance, develop talent and foster an inclusive environment.</li>
+					<li>Manage the creative process from concept to completion, communicate effectively with campus partners and ensure that high-quality work is completed on time and on budget.</li>
+					<li>Prioritize projects based on strategic insight and information from the Chief Marketing & Communication Officer and key institutional goals and allocate resources accordingly.</li>
+					<li>Determine, recommend and implement the systems and structures needed for the creative team to operate most efficiently and effectively. Implement and/or modify technology, tools and processes accordingly.</li>
+				</ul>
+			</li>
+			<li data-counter>
+				<p>Cultivate strong and productive relationships with campus colleagues, as well as with external vendors and partners.</p>
+			</li>
+		</ol>
+	</div>
+</section>
+
+<section class="description">
+	<h2 class="description__title">Qualifications</h2>
+	<div class="description-text-container">
+		<ul>
+			<li>Bachelor’s degree required, MFA or MA preferred.</li>
+			<li>At least seven years of increasingly challenging related work experience </li>
+			<li>Strong leadership abilities. Prior experience managing and mentoring creative professionals required; experience leading cross-functional teams strongly preferred.</li>
+			<li>A strong record of outstanding design practice and a sophisticated visual sensibility.</li>
+			<li>An understanding of visual systems, proficiency with design software and knowledge of design history. </li>
+			<li>Demonstrated ability to successfully translate complex ideas into compelling print materials and digital experiences for visually sophisticated audiences. </li>
+			<li>Proven ability to create a connection with and foster engagement from diverse audiences.  </li>
+			<li>A strategic and innovative thinker and creative problem solver</li>
+			<li>Stellar communication, presentation, problem-solving and project-management skills</li>
+			<li>Demonstrated success managing the creative process and proven ability to provide art direction on small-and large-scale projects from creative conception to completion.</li>
+			<li>Excellent interpersonal skills and proven ability to cultivate and maintain strong relationships. </li>
+			<li>Demonstrated ability to inspire and motivate others; able to give and receive constructive feedback.</li>
+			<li>Interest in art, design and higher education.</li>
+			<li>An understanding of RISD’s culture, identity and community appreciated.</li>
+		</ul>
+	</div>
+</section>
+
+<section>
+	<button class="apply"><a href="http://careers.risd.edu/postings/1704" target="_blank">Apply</a></button>
+</section>
+
+<section class="modal">
+</section>
