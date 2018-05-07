@@ -37,7 +37,6 @@ p, li{
 	@extend %sans-serif;
 	font-weight:bold;
 	@include text-size($button);
-	letter-spacing:-0.06em;
 	border:none;
 	padding:0;
 	display:block;
@@ -82,7 +81,7 @@ p, li{
 		&.right{
 			right:-60px;
 		}
-	};	
+	};
 }
 
 
