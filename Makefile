@@ -1,3 +1,5 @@
+.PHONY: build server watch-server watch-styles deploy
+
 # builds site into _site
 build:
 	bundle exec jekyll build
@@ -16,5 +18,5 @@ watch-styles:
 	bundle exec sass --watch assets/main.scss
 
 # pushes built site
-deploy:
-	rm-wh push-static creative-director.risd.systems --staticFolder=_site
+deploy: build
+	npx rm-wh push-static creative-director.risd.systems --staticFolder=_site

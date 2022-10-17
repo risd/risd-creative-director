@@ -1,0 +1,26 @@
+{
+  "name": "risd-creative-director",
+  "version": "1.0.0",
+  "description": "*Minima is a one-size-fits-all Jekyll theme for writers*. It's Jekyll's default (and first) theme. It's what you get when you run `jekyll new`.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/risd/risd-creative-director.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/risd/risd-creative-director/issues"
+  },
+  "engines": {
+    "node": ">= 16.4.0",
+    "npm": ">= 7.18.0"
+  },
+  "homepage": "https://github.com/risd/risd-creative-director#readme",
+  "devDependencies": {
+    "rm-webhook": "^3.0.1"
+  }
+}
